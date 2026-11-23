@@ -1,0 +1,31 @@
+[project]
+name = "ai-eng-foundations"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "developer-ia-underall", email = "developer-ia@call4all.co.ao" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "langchain>=1.5.2",
+    "langchain-google-genai>=4.5.2",
+    "langchain-groq>=1.2.1",
+    "langchain-ollama>=1.1.0",
+    "langgraph>=1.2.24",
+    "python-dotenv>=1.2.4",
+]
+
+[project.scripts]
+ai-eng-foundations = "ai_eng_foundations:main"
+
+[build-system]
+requires = ["uv_build>=0.13.9,<0.14.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "ipykernel>=7.4.0",
+    "pytest>=9.2.0",
+    "ruff>=0.17.6",
+]
